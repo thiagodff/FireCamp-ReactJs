@@ -18,6 +18,7 @@ export const Content = styled.div`
     background: #fff;
     border-radius: 4px;
     padding: 30px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
   }
 
   img {
@@ -31,12 +32,11 @@ export const Content = styled.div`
     margin-top: 30px;
 
     strong {
-      display: flex;
       font-size: 14px;
       color: #444;
       font-weight: bold;
       margin-bottom: 8px;
-      align-items: flex-start;
+      align-self: flex-start;
     }
 
     input {
@@ -50,6 +50,13 @@ export const Content = styled.div`
 
       &::placeholder {
       }
+    }
+
+    span {
+      color: red;
+      align-self: flex-start;
+      margin: -10px 0 10px;
+      font-weight: bold;
     }
 
     button {
