@@ -1,13 +1,20 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import { signOut } from '~/store/modules/auth/actions';
 
 import { Container, Content, Profile, Logout } from './styles';
 
 import logo2 from '~/assets/logo2.svg';
 
 export default function Header() {
-  function handleLogout() {
-    console.tron.log('logout');
+  const dispatch = useDispatch();
+
+  const profile = useSelector(state => state.user.profile);
+
+  function handleSignOut() {
+    dispatch(signOut());
   }
 
   return (
@@ -21,10 +28,10 @@ export default function Header() {
 
         <Profile>
           <div>
-            <strong>Bear Gryls</strong>
+            <strong>{profile.name}</strong>
             <Link to="profile">Meu perfil</Link>
           </div>
-          <Logout onClick={handleLogout}>Sair</Logout>
+          <Logout onClick={handleSignOut}>Sair</Logout>
         </Profile>
       </Content>
     </Container>
