@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Form, Input, Textarea } from '@rocketseat/unform';
 import PropTypes from 'prop-types';
 import { isBefore, subHours } from 'date-fns';
@@ -20,22 +20,37 @@ export default function Edit({ location }) {
     const [year, month, day] = choseDate.split('-');
     const [hour, minute] = time.split(':');
 
+    if (!choseDate && !time) {
+      toast.error('A data e a hora da atividade devem ser preenchidas');
+      return;
+    }
+
     const date = new Date(year, month - 1, day, hour, minute);
 
     if (isBefore(subHours(date, 1), new Date())) {
       toast.error(
-        'A atividade tem que ser cadastrada com até 1 hora de antecedência'
+        'A atividade deve ser cadastrada com até 1 hora de antecedência'
       );
       return;
     }
 
+    console.tron.log(data);
+    console.tron.log(date);
     try {
-      const { title, description, location, image_id: banner_id } = data;
+      const { title, description, location: locale, banner_id } = data;
 
-      await api.post('instructor-activities', {
+      await api.put(`instructor-activities/${activity.id}`, {
         title,
         description,
-        location,
+        location: locale,
+        date,
+        banner_id,
+      });
+
+      console.tron.log({
+        title,
+        description,
+        location: locale,
         date,
         banner_id,
       });
@@ -46,6 +61,10 @@ export default function Edit({ location }) {
       console.tron.log(err);
       toast.error('Falha no cadastro de nova atividade, verifique os dados');
     }
+  }
+
+  async function handleBack() {
+    history.goBack();
   }
 
   return (
@@ -66,7 +85,12 @@ export default function Edit({ location }) {
           <Input id="location" name="location" placeholder="Localização" />
         </div>
 
-        <button type="submit">Salvar atividade</button>
+        <footer>
+          <button id="back" type="button" onClick={handleBack}>
+            Voltar
+          </button>
+          <button type="submit">Salvar atividade</button>
+        </footer>
       </Form>
     </Container>
   );

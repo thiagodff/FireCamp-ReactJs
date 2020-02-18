@@ -47,19 +47,35 @@ export const Container = styled.div`
       font-family: sans-serif;
     }
 
-    button {
-      margin-top: -5px 0 0 0;
-      height: 44px;
-      background: #71c285;
-      color: #fff;
-      font-weight: bold;
-      font-size: 16px;
-      border: 0;
-      border-radius: 4px;
-      transition: background 0.2s;
+    footer {
+      display: flex;
+      justify-content: space-between;
 
-      &:hover {
-        background: ${darken(0.05, '#71c285')};
+      button {
+        margin-top: -5px 0 0 0;
+        height: 44px;
+        width: 300px;
+        background: #71c285;
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        border: 0;
+        border-radius: 4px;
+        transition: background 0.2s;
+
+        &:hover {
+          background: ${darken(0.05, '#71c285')};
+        }
+      }
+
+      button#back {
+        background: #999;
+        transition: background 0.2s;
+        /* width: 200px; */
+
+        &:hover {
+          background: ${darken(0.05, '#999')};
+        }
       }
     }
   }

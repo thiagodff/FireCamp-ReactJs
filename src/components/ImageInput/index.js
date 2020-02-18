@@ -9,7 +9,7 @@ import { Container } from './styles';
 export default function ImageInput() {
   const { defaultValue, registerField } = useField('banner'); // initialData do form
 
-  const [file, setFile] = useState(defaultValue && defaultValue.id);
+  const [file, setFile] = useState(defaultValue && defaultValue.banner_id);
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
 
   const ref = useRef();
@@ -38,13 +38,13 @@ export default function ImageInput() {
 
   return (
     <Container>
-      <label htmlFor="banner">
+      <label htmlFor="banner_id">
         <div>
           <img src={preview || ''} alt="" />
           {preview ? null : <MdImage />}
           <input
             type="file"
-            id="banner"
+            id="banner_id"
             accept="image/*"
             data-file={file}
             onChange={handleChange}

@@ -45,6 +45,10 @@ export default function New() {
     }
   }
 
+  async function handleBack() {
+    history.goBack();
+  }
+
   return (
     <Container>
       <Form onSubmit={handleSubmit}>
@@ -62,7 +66,12 @@ export default function New() {
           <Input id="location" name="location" placeholder="Localização" />
         </div>
 
-        <button type="submit">Salvar atividade</button>
+        <footer>
+          <button id="back" type="button" onClick={handleBack}>
+            Voltar
+          </button>
+          <button type="submit">Salvar atividade</button>
+        </footer>
       </Form>
     </Container>
   );

@@ -20,7 +20,7 @@ export default function Dashboard() {
           ...act,
           dateFormatted: format(
             parseISO(act.date),
-            "d 'de' MMMM', às' hh:mm'h'",
+            "d 'de' MMMM', às' HH:mm'h'",
             {
               locale: pt,
             }
