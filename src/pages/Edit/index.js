@@ -10,7 +10,9 @@ import api from '~/services/api';
 
 import { Container } from './styles';
 
-export default function Edit({ activity }) {
+export default function Edit({ location }) {
+  const [activity] = useState(location.state);
+
   async function handleSubmit(data) {
     console.tron.log(data);
     const { choseDate, time } = data;
@@ -46,31 +48,9 @@ export default function Edit({ activity }) {
     }
   }
 
-  // useEffect(() => {
-  //   async function findActivity() {
-  //     const { id } = match.params;
-
-  //     const response = await api.get('instructor-activities');
-
-  //     const editActivity = await response.data.find(
-  //       resp => resp.id === Number(id)
-  //     );
-
-  //     setActivity({
-  //       ...editActivity,
-  //       banner: {
-  //         ...editActivity.banner,
-  //         id: editActivity.banner_id,
-  //       },
-  //     });
-  //   }
-
-  //   findActivity();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
-
   return (
     <Container>
+      {console.tron.log(activity)}
       <Form initialData={activity} onSubmit={handleSubmit}>
         <ImageInput name="banner_id" />
 
@@ -91,3 +71,9 @@ export default function Edit({ activity }) {
     </Container>
   );
 }
+
+Edit.propTypes = {
+  location: PropTypes.shape({
+    state: PropTypes.any.isRequired,
+  }).isRequired,
+};
