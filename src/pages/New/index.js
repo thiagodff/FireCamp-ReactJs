@@ -11,7 +11,6 @@ import { Container } from './styles';
 
 export default function New() {
   async function handleSubmit(data) {
-    console.tron.log(data);
     const { choseDate, time } = data;
 
     const [year, month, day] = choseDate.split('-');
@@ -27,7 +26,7 @@ export default function New() {
     }
 
     try {
-      const { title, description, location, image_id: banner_id } = data;
+      const { title, description, location, banner_id } = data;
 
       await api.post('instructor-activities', {
         title,
