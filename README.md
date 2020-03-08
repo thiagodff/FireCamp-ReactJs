@@ -1,68 +1,76 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+<br>
+  <img src="./.github/logo22.svg" alt="FireCamp" width="190">
+<br>
+<br>
+FireCamp
+</h1>
 
-## Available Scripts
+<p align="center">A Software as a Service for campers to subscribe for activities</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+  </a>
+</p>
 
-### `yarn start`
+<div>
+  <img src=".github/firecampWebAuth2.gif" alt="firecampAuthGif" height="425">
+  <img src=".github/firecampWebActivity2.gif" alt="firecampActivityGif" height="425">
+</div>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<hr />
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## About the project
 
-### `yarn test`
+Web App of the **FireCamp System**. As a instructor, you're able to create and edit activities.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To see the **api**, click here: [FireCamp Rest API](https://github.com/thiagodff/FireCamp-NodeJs)
+<br>
+To see the **camper interface**, click here to take a look in the mobile aplicattion: [FireCamp Mobile](https://github.com/thiagodff/FireCamp-ReactNative)
 
-### `yarn build`
+## Features
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This app features all the latest tools and practices development!
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- [React Js](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [Redux-Saga](https://redux-saga.js.org/)
+- [Redux-Persist](https://github.com/rt2zz/redux-persist)
+- [Reactotron](https://github.com/infinitered/reactotron)
+- [Prop-Types](https://github.com/facebook/prop-types)
+- [History](https://github.com/ReactTraining/history)
+- [Immer](https://immerjs.github.io/immer/docs/introduction)
+- [React-Toastify](https://fkhadra.github.io/react-toastify/)
+- [Styled-Components](https://styled-components.com/)
+- [Axios](https://github.com/axios/axios)
+- [Date-fns](https://date-fns.org/)
+- [ESLint](https://eslint.org/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting started
 
-### `yarn eject`
+1. Clone this repo using `git clone https://github.com/thiagodff/FireCamp-ReactJs`
+2. Move yourself to the appropriate directory: `cd FireCamp-ReactJs`<br>
+3. Run `yarn` to install dependencies<br />
+4. Run `yarn start` to run the application
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+obs: make shure you have [api](https://github.com/thiagodff/FireCamp-NodeJs) running.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Create an administrative controller web page, be able to create and edit new plans for campers and enroll them.<br>
+Create a mobile app for instructors.<br>
+Show the current plan of the camper in your app.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [x] Modify api
+- [ ] Admin page
+- [ ] Instructor app
+- [ ] Modify camper app
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/licenses/MIT) page for details.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Made with ♥ by Thiago :wave: [See my linkedin!](https://www.linkedin.com/in/thiago-fernandes-dornelles/)
