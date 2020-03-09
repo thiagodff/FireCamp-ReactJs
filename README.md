@@ -34,6 +34,7 @@ To see the **camper interface**, click here to take a look in the mobile aplicat
 This app features all the latest tools and practices development!
 
 - [React Js](https://reactjs.org/)
+- [React-Router-Dom](https://reacttraining.com/react-router/)
 - [Redux](https://redux.js.org/)
 - [Redux-Saga](https://redux-saga.js.org/)
 - [Redux-Persist](https://github.com/rt2zz/redux-persist)
