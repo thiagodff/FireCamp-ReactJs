@@ -6,7 +6,7 @@
 FireCamp
 </h1>
 
-<p align="center">A Software as a Service for campers to subscribe for activities</p>
+<p align="center">Web App for instructors to create and edit activities</p>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
